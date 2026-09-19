@@ -1,46 +1,38 @@
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
-const revealItems = document.querySelectorAll(".reveal");
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const items = document.querySelectorAll(".reveal");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (prefersReducedMotion || !("IntersectionObserver" in window)) {
-  revealItems.forEach((item) => item.classList.add("visible"));
+if (reducedMotion || !("IntersectionObserver" in window)) {
+  items.forEach((item) => item.classList.add("visible"));
 } else {
-  const observer = new IntersectionObserver(
-    (entries, currentObserver) => {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("visible");
-        currentObserver.unobserve(entry.target);
+        observer.unobserve(entry.target);
       });
     },
     { threshold: 0.12 }
   );
-
-  revealItems.forEach((item) => observer.observe(item));
+  items.forEach((item) => revealObserver.observe(item));
 }
 
-const sectionLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"]')];
-const sections = sectionLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
+const links = [...document.querySelectorAll('nav a[href^="#"]')];
+const sections = links.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
 
-if ("IntersectionObserver" in window && sections.length) {
-  const navObserver = new IntersectionObserver(
+if ("IntersectionObserver" in window) {
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
+      const visible = entries.find((entry) => entry.isIntersecting);
       if (!visible) return;
-      sectionLinks.forEach((link) => {
-        const active = link.getAttribute("href") === `#${visible.target.id}`;
-        link.toggleAttribute("aria-current", active);
-      });
+      links.forEach((link) =>
+        link.toggleAttribute("aria-current", link.getAttribute("href") === `#${visible.target.id}`)
+      );
     },
-    { rootMargin: "-25% 0px -60% 0px", threshold: [0.05, 0.3] }
+    { rootMargin: "-30% 0px -60% 0px" }
   );
-
-  sections.forEach((section) => navObserver.observe(section));
+  sections.forEach((section) => sectionObserver.observe(section));
 }
