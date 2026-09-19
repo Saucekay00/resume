@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cybersecurity portfolio of Shanjif Cakravrthi — cybersecurity student, Linux user, home-lab builder, and technical support practitioner."
+    />
+    <meta name="theme-color" content="#07110f" />
+    <title>Shanjif Cakravrthi | Cybersecurity Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Shanjif Cakravrthi, back to top">
+        <span class="brand-mark" aria-hidden="true">SC</span>
+        <span class="brand-copy">
+          <strong>Shanjif Cakravrthi</strong>
+          <small>Cybersecurity student</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Page sections">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+      </nav>
+
+      <a class="header-cta" href="mailto:scakravrthi04@gmail.com">Contact</a>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Open to August 2027 internships</p>
+          <h1 id="hero-title">I build systems.<br /><span>I learn how to defend them.</span></h1>
+          <p class="hero-summary">
+            Cybersecurity student with hands-on experience in Linux administration, network troubleshooting,
+            self-hosted infrastructure, and security testing tools.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="assets/Shanjif-Cakravrthi-Resume.pdf" download>
+              Download résumé <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+          <ul class="hero-facts" aria-label="Quick facts">
+            <li><span>Based in</span><strong>Malaysia</strong></li>
+            <li><span>Studying at</span><strong>MMU Cyberjaya</strong></li>
+            <li><span>Graduating</span><strong>2028</strong></li>
+          </ul>
+        </div>
+
+        <div class="terminal-wrap" aria-label="Profile snapshot">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot amber"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">shanjif@homelab:~</span>
+            </div>
+            <div class="terminal-body" aria-hidden="true">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="output">cybersecurity_student</p>
+              <p><span class="prompt">$</span> cat current_focus.txt</p>
+              <p class="output">network_security<br />linux_systems<br />ethical_hacking</p>
+              <p><span class="prompt">$</span> systemctl status curiosity</p>
+              <p class="output"><span class="online">● active</span> — always learning</p>
+              <p><span class="prompt">$</span> <span id="typed-command">secure_the_future</span><span class="cursor">_</span></p>
+            </div>
+          </div>
+          <div class="signal-card" aria-hidden="true">
+            <div class="signal-head"><span>LAB SIGNAL</span><span>LIVE</span></div>
+            <div class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / Selected work</p>
+          <h2 id="projects-title">Built to understand<br />what sits beneath the screen.</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-number">01</div>
+            <div class="project-copy">
+              <p class="project-kicker">Infrastructure · Self-hosting</p>
+              <h3>Private cloud &amp; storage lab</h3>
+              <p>
+                Deployed an Ubuntu Server environment running Nextcloud and Immich for private storage,
+                media backup, and secure data sharing.
+              </p>
+              <ul class="project-points">
+                <li>Configured storage, networking, and access controls</li>
+                <li>Maintained service availability and secure local access</li>
+                <li>Learned by operating real services, not only simulations</li>
+              </ul>
+              <div class="tag-row" aria-label="Technologies used">
+                <span>Ubuntu Server</span><span>Nextcloud</span><span>Immich</span><span>Networking</span>
+              </div>
+            </div>
+            <div class="server-visual" aria-hidden="true">
+              <div class="server-unit"><span></span><i></i><i></i><i></i></div>
+              <div class="server-unit"><span></span><i></i><i></i><i></i></div>
+              <div class="server-unit"><span></span><i></i><i></i><i></i></div>
+              <div class="server-grid"></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">02</div>
+            <p class="project-kicker">Network security · Simulation</p>
+            <h3>Enterprise network scenarios</h3>
+            <p>
+              Built Packet Tracer topologies to test VLAN segmentation, routing policies, and enterprise
+              network design concepts.
+            </p>
+            <div class="network-map" aria-hidden="true">
+              <span class="node node-a"></span><span class="node node-b"></span><span class="node node-c"></span>
+              <span class="node node-d"></span><span class="node node-e"></span>
+              <svg viewBox="0 0 500 160" preserveAspectRatio="none">
+                <path d="M48 78 L158 34 L252 82 L355 30 L455 78 M158 34 L176 126 L252 82 L356 130 L455 78" />
+              </svg>
+            </div>
+            <div class="tag-row"><span>Cisco Packet Tracer</span><span>VLANs</span><span>Routing</span></div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">03</div>
+            <p class="project-kicker">Security testing · Practice</p>
+            <h3>Reconnaissance &amp; web testing</h3>
+            <p>
+              Practised structured reconnaissance, traffic analysis, threat simulation, and web application
+              testing in controlled learning environments.
+            </p>
+            <div class="tool-stack" aria-label="Tools used">
+              <span>Wireshark</span><span>Nmap</span><span>Metasploit</span><span>Burp Suite</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / Technical toolkit</p>
+          <h2 id="skills-title">Practical skills.<br />Curious mindset.</h2>
+        </div>
+
+        <div class="skills-panel reveal">
+          <div class="skill-column">
+            <p class="skill-label">Security &amp; networking</p>
+            <ul>
+              <li><span>Network analysis</span><em>Wireshark · Nmap</em></li>
+              <li><span>Security testing</span><em>Metasploit · Burp Suite</em></li>
+              <li><span>Network design</span><em>Packet Tracer · VLANs</em></li>
+              <li><span>Core practice</span><em>Troubleshooting · UAC</em></li>
+            </ul>
+          </div>
+          <div class="skill-column">
+            <p class="skill-label">Systems &amp; development</p>
+            <ul>
+              <li><span>Linux</span><em>CachyOS · Arch-based · Ubuntu Server</em></li>
+              <li><span>Platforms</span><em>Windows · macOS</em></li>
+              <li><span>Programming</span><em>Java · JavaScript · PHP · Python</em></li>
+              <li><span>Foundations</span><em>C++ · OOP · Databases</em></li>
+            </ul>
+          </div>
+          <aside class="cert-card">
+            <p class="skill-label">In progress</p>
+            <span class="cert-icon" aria-hidden="true">G</span>
+            <h3>Google Cybersecurity Professional Certificate</h3>
+            <p>Coursera</p>
+            <span class="progress-line"><i></i></span>
+            <small>Building industry-aligned foundations</small>
+          </aside>
+          <div class="language-strip" aria-label="Languages">
+            <span class="skill-label">Languages</span>
+            <p><strong>English</strong> Professional</p>
+            <p><strong>Bahasa Melayu</strong> Professional</p>
+            <p><strong>Tamil</strong> Native / bilingual</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 / Experience</p>
+          <h2 id="experience-title">Supporting real systems<br />and real users.</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2024 — Present</div>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="project-kicker">MMT Universal Academy</p>
+              <h3>Part-time Technical Support</h3>
+              <p>
+                Diagnose network, connectivity, and hardware issues; manage permissions and user access;
+                maintain administrative systems and workstation availability.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <p class="project-kicker">MMT Universal Academy</p>
+              <h3>IT Support Intern</h3>
+              <p>
+                Built practical experience across technical support, hardware configuration, connectivity,
+                access management, and day-to-day operational troubleshooting.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell section-block" id="education" aria-labelledby="education-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 / Education</p>
+          <h2 id="education-title">The theory behind<br />the hands-on work.</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <div class="education-year">2025 — 2028</div>
+            <p class="project-kicker">Multimedia University · Cyberjaya</p>
+            <h3>Bachelor of Computer Science (Hons), Cybersecurity</h3>
+            <p>Current Year 2, Semester 2 student</p>
+            <div class="tag-row">
+              <span>Ethical Hacking</span><span>Network Security</span><span>Cryptography</span><span>Algorithms</span>
+            </div>
+          </article>
+          <article class="education-card reveal">
+            <div class="education-year">2022 — 2025</div>
+            <p class="project-kicker">UCSI University · Kuala Lumpur</p>
+            <h3>Diploma in Information Technology</h3>
+            <p>CGPA 3.64</p>
+            <div class="tag-row">
+              <span>Operating Systems</span><span>Networks</span><span>Java</span><span>Systems Analysis</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-title">
+        <div class="section-shell contact-inner reveal">
+          <p class="eyebrow">05 / Let’s connect</p>
+          <h2 id="contact-title">Looking for a cybersecurity intern<br />who likes to build and investigate?</h2>
+          <p>I’m open to internship opportunities from August 2027.</p>
+          <div class="contact-actions">
+            <a class="button button-light" href="mailto:scakravrthi04@gmail.com">scakravrthi04@gmail.com <span aria-hidden="true">↗</span></a>
+            <a class="phone-link" href="tel:+60195601010">+60 19-560 1010</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <span>© <span id="year"></span> Shanjif Cakravrthi</span>
+      <span>Designed for clarity. Built for the web.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
